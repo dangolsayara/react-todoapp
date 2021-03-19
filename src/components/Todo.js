@@ -6,9 +6,24 @@ const Todo = ({text,todo,todos,setTodos}) => {
         setTodos(todos.filter(el=> el.id !== todo.id));
         // console.log(todo);
     }
+
+    const completeHandler=()=>{
+        setTodos(todos.map((item)=>{
+            if(item.id === todo.id){
+                return{
+                    ...item,completed:!item.completed
+                };
+            };
+            return item;
+        })
+        );
+    };
     return (
         <div className="todo">
-            <li className="todo-item">{text}</li>
+            <li className={`todo-item ${todo.completed ?"completed" :""}`} >{text}</li>
+            <button onClick={completeHandler} className="complete-btn" >
+               Checked
+            </button>
             <button onClick={deleteHandler} className="trash-btn" >
                delete
             </button>
