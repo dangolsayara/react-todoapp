@@ -13,6 +13,12 @@ header {
   font-size: 2rem;
 }
 
+.App h1{
+  display: flex;
+  justify-content: center;
+  margin:2rem;
+}
+
 header,
 form {
   min-height: 20vh;
@@ -94,3 +100,24 @@ form button:hover {
 }
 
 
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgb(139, 155, 192);
+  color: white;
+}
+
+
+.nav-links{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.nav-li {
+  color:white;
+  text-decoration: none;  
+}
