@@ -1,5 +1,4 @@
-import React ,{useState}from 'react'
-
+import React from 'react'
 import Nav from './components/Navbar'
 import About from './components/About'
 import Contact from './components/Contact'
